@@ -1,6 +1,6 @@
 import 'package:adv_basics/models/quiz_question.dart';
 
-class Questions {
+class QuestionsBank {
   final questions = [
     QuizQuestion('What are the main building blocks of Flutter UIs?', [
       'Widgets',
