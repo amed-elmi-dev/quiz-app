@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class QuestionsIdentifier extends StatelessWidget {
   const QuestionsIdentifier({
@@ -19,12 +20,12 @@ class QuestionsIdentifier extends StatelessWidget {
       decoration: BoxDecoration(
         color: isCorrect
             ? Colors.lightBlueAccent
-            : const Color.fromARGB(255, 197, 21, 241),
+            : const Color.fromARGB(255, 255, 49, 241),
         borderRadius: BorderRadius.circular(100),
       ),
       child: Text(
         questionNum.toString(),
-        style: TextStyle(
+        style: GoogleFonts.lato(
           fontSize: 16,
           fontWeight: FontWeight.bold,
           color: Colors.black,

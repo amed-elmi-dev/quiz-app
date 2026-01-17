@@ -37,7 +37,7 @@ class _QuestionsState extends State<Questions> {
           children: [
             Text(
               currentQuestion.text,
-              style: GoogleFonts.roboto(color: Colors.white, fontSize: 16),
+              style: GoogleFonts.lato(color: Colors.white, fontSize: 16),
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 30),
