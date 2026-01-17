@@ -1,5 +1,5 @@
 import 'package:adv_basics/data/questions_bank.dart';
-import 'package:adv_basics/questions_summary.dart';
+import 'package:adv_basics/questions_summary/questions_summary.dart';
 import 'package:flutter/material.dart';
 
 class ResultsScreen extends StatelessWidget {
@@ -22,9 +22,9 @@ class ResultsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final summarData = getSummaryData();
+    final summerData = getSummaryData();
     final numTotalQuestions = questions.length;
-    final numCorrectQuestions = summarData.where((data) {
+    final numCorrectQuestions = summerData.where((data) {
       return data['user_answer'] == data['correct_answer'];
     }).length;
     return SizedBox(
@@ -38,7 +38,7 @@ class ResultsScreen extends StatelessWidget {
               "You answered $numCorrectQuestions out of $numTotalQuestions questions correctly!",
             ),
             SizedBox(height: 30),
-            QuestionsSummary(getSummaryData()),
+            QuestionsSummary(summerData),
             SizedBox(height: 30),
             TextButton(onPressed: () {}, child: Text("Restart Quiz")),
           ],
